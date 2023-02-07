@@ -8,12 +8,8 @@ import { useCallback, useEffect } from "react";
 const Home = () => {
   const dispatch = useAppDispatch();
 
-  const fetchPets = useCallback(() => {
-    dispatch(getpet());
-  }, []);
-
   useEffect(() => {
-    fetchPets();
+    dispatch(getpet());
   }, []);
   const pets = useAppSelector((state) => state.pets.pets);
 
